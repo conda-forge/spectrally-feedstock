@@ -1,5 +1,5 @@
 {% set name = "spectrally" %}
-{% set version = "0.0.1" %}
+{% set version = "0.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,16 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spectrally-{{ version }}.tar.gz
-  sha256: 7943240d7701658907d5fbfd5351cfc8dd041c4c04133557850d0407ea905648
+  sha256: ed1b7b7eb3bb90789fa7749b3a1b8d45f7dd3c3c35341421b51921b03226f446
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
+  entry_points:
+    - spectrally-version = scripts.spectrallyversion:main
+    - specrally-custom=scripts.spectrallycustom:main
+    - spectrally = scripts.spectrally_bash:main
 
 requirements:
   host:
@@ -27,8 +31,7 @@ requirements:
     - matplotlib-base
     - pandas
     - requests
-    - datastock >=0.0.39
-    - bsplines2d >=0.0.15
+    - bsplines2d >=0.0.16
 
 test:
   imports:
