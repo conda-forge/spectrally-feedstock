@@ -12,11 +12,11 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   entry_points:
-    - spectrally-version = scripts.spectrallyversion:main
-    - specrally-custom=scripts.spectrallycustom:main
-    - spectrally = scripts.spectrally_bash:main
+    - spectrally-version = spectrally.scripts.spectrallyversion:main
+    - specrally-custom=spectrally.scripts.spectrallycustom:main
+    - spectrally = spectrally.scripts.spectrally_bash:main
 
 requirements:
   host:
