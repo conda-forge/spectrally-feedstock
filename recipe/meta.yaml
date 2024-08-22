@@ -1,5 +1,5 @@
 {% set name = "spectrally" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spectrally-{{ version }}.tar.gz
-  sha256: ed1b7b7eb3bb90789fa7749b3a1b8d45f7dd3c3c35341421b51921b03226f446
+  sha256: f0557e9b35a7704aac73345cc5662d6f11e4eb6023e62a94adedc7837bbd7755
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   entry_points:
     - spectrally-version = spectrally.scripts.spectrallyversion:main
     - specrally-custom=spectrally.scripts.spectrallycustom:main
