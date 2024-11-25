@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spectrally-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/spectrally-{{ version }}.tar.gz
   sha256: 44ebcd04c76fad8e6a9eb094d36f09bf88d4983a899cbcf20c4a926f1c3a5133
 
 build:
