@@ -1,13 +1,14 @@
 {% set name = "spectrally" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/spectrally-{{ version }}.tar.gz
-  sha256: fccfc999b08ff202bb6e1181960c3507e73b53c6a4f120d47ff74f4107868a3c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/spectrally-{{ version }}.tar.gz
+  sha256: 44ebcd04c76fad8e6a9eb094d36f09bf88d4983a899cbcf20c4a926f1c3a5133
 
 build:
   noarch: python
@@ -20,19 +21,19 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - setuptools >=40.8.0
     - wheel
     - pip
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy <2.0
     - scipy
     - matplotlib-base
     - pandas
     - requests
-    - datastock >=0.0.41
-    - bsplines2d >=0.0.16
+    - datastock >=0.0.42
+    - bsplines2d >=0.0.17
 
 test:
   imports:
@@ -41,6 +42,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ToFuProject/spectrally
