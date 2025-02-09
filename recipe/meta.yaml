@@ -1,5 +1,5 @@
 {% set name = "spectrally" %}
-{% set version = "0.0.7" %}
+{% set version = "0.0.9" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/spectrally-{{ version }}.tar.gz
-  sha256: 44ebcd04c76fad8e6a9eb094d36f09bf88d4983a899cbcf20c4a926f1c3a5133
+  sha256: 2fd6b8d82dd5b2b84aab6945c99abdb37c8cd24c99722e6ee8a0a3a8f6479c9f
 
 build:
   noarch: python
@@ -32,8 +32,7 @@ requirements:
     - matplotlib-base
     - pandas
     - requests
-    - datastock >=0.0.42
-    - bsplines2d >=0.0.17
+    - bsplines2d >=0.0.19
 
 test:
   imports:
