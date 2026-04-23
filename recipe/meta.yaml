@@ -1,5 +1,5 @@
 {% set name = "spectrally" %}
-{% set version = "0.0.9" %}
+{% set version = "0.0.10" %}
 {% set python_min = "3.8" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/spectrally-{{ version }}.tar.gz
-  sha256: 2fd6b8d82dd5b2b84aab6945c99abdb37c8cd24c99722e6ee8a0a3a8f6479c9f
+  sha256: bc2c03be6d6d0e866a904b9c56d2b73c6acad152f45d979cad5f3b3272220b8b
 
 build:
   noarch: python
